@@ -1,0 +1,196 @@
+.page-custom-content {
+  margin-top: 40px;
+  padding: 0px 30px;
+  padding-bottom: 30px;
+}
+.banner-tag-line-container {
+  align-items: flex-start;
+  background-color: #f2f4f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.tagline {
+  margin-left: 20px;
+}
+.tagline p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #545454;
+}
+.orderNow {
+  margin-left: 20px;
+}
+.banner-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+.banner-image {
+  height: auto;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mid-trans-container .col span {
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.banner-ads {
+  height: auto;
+  width: 100%;
+}
+.features-container {
+  margin-top: 30px;
+}
+.features-container h5 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #545454;
+}
+.feature-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.highlight {
+  font-weight: 900;
+  font-size: 35;
+  color: #545454;
+}
+.marginTop {
+  margin-top: 20;
+}
+.fontBold {
+  font-weight: 700;
+}
+.feature-image {
+  width: 160px;
+}
+.feature-product-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-basis: 20%;
+  box-sizing: border-box;
+}
+.ciit-merch-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.ciit-merch-feature-title {
+  font-size: 20px;
+  color: #545454;
+}
+.delivery-pickup {
+  display: flex;
+  align-items: center;
+}
+.delivery-pickup-logo {
+  color: #fff;
+  max-height: 100px;
+  margin-right: 10px;
+}
+.secure-payment {
+  display: flex;
+  align-items: center;
+}
+.secure-payment-logo {
+  color: #fff;
+  max-height: 70px;
+  margin-right: 10px;
+}
+@media (max-width: 1199px) {
+  .feature-image {
+    width: 180px;
+  }
+}
+@media (max-width: 991px) {
+  .feature-image {
+    width: 130px;
+  }
+  .banner-container {
+    background-color: #fff;
+  }
+  .banner-tag-line-container {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .page-custom-content {
+    padding: 0px 60px;
+    padding-bottom: 40px;
+  }
+  .feature-image {
+    width: 160px;
+  }
+  .banner-ads {
+    margin-top: 30px;
+  }
+  .ciit-merch-feature {
+    text-align: center;
+  }
+  .delivery-pickup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+  }
+  .delivery-pickup-logo {
+    color: #fff;
+    max-height: 90px;
+  }
+  .secure-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+  }
+  .secure-payment-logo {
+    color: #fff;
+    max-height: 70px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .page-custom-content {
+    padding: 0px 30px;
+    padding-bottom: 40px;
+  }
+  .feature-products {
+    display: block;
+  }
+  .feature-products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-image {
+    width: 100%;
+  }
+}
+@media (max-width: 431px) {
+  .banner-container {
+    background-color: #fff;
+  }
+  .banner-tag-line-container {
+    margin-bottom: 20px;
+  }
+  .mid-trans-container .col span {
+    font-size: 10px;
+  }
+  .officialFont {
+    font-size: 15px;
+  }
+  .featureProducts {
+    margin-top: 40px;
+  }
+}
