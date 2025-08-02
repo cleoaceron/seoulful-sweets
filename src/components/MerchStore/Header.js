@@ -4,15 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 //Import Icons
 import FeatherIcon from "feather-icons-react";
 // Reactstrap
-import {
-  Container,
-  Row,
-  Col,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 //redux
 import { actionCreator, types } from "../../store";
 import "./styles.css";
@@ -25,7 +17,6 @@ const Header = ({ authentication, cart, ...props }) => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [searchKey, setSearchKey] = React.useState(null);
   const [minTopNav, setMinTopNav] = React.useState(false);
-  const typingTimeoutRef = React.useRef(null);
   const toggle = () => setDropdownOpen(!dropdownOpen);
 
   const numberOfCartItems = cart.data.length || 0;
@@ -120,7 +111,7 @@ const Header = ({ authentication, cart, ...props }) => {
               <Col lg={6} md={5} sm={12} xxl={6}>
                 <div className="left-upper-header">
                   <span className="welcome-container">
-                    Welcome to WeAre, CIIT’s Official Merch{" "}
+                    Welcome to Seoulful Sweets!
                   </span>
                 </div>
               </Col>
@@ -130,7 +121,10 @@ const Header = ({ authentication, cart, ...props }) => {
                     <i className="bx bx-bell"></i> Notifications
                   </span>
                   <span>
-                    <Link to={"https://bit.ly/3D4mPPq"} target="_blank">
+                    <Link
+                      to={"https://www.facebook.com/messages/t/502903216233917"}
+                      target="_blank"
+                    >
                       <i className="bx bx-message-rounded-dots"></i> Chat us
                     </Link>
                   </span>

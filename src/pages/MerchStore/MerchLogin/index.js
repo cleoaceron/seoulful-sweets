@@ -12,7 +12,7 @@ import {
   Spinner,
 } from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { actionCreator, types } from "../../../store";
 import withRouter from "../../../components/Common/withRouter";
 // Formik validation
@@ -22,6 +22,8 @@ import { useFormik } from "formik";
 import seoulfulLogo from "../../../assets/images/seoulful-logo.png";
 
 const MerchLogin = ({ authentication, ...props }) => {
+  const location = useLocation();
+  const { from } = location.state || {};
   const [passwordShow, setPasswordShow] = React.useState(false);
   let navigate = useNavigate();
 
@@ -64,8 +66,8 @@ const MerchLogin = ({ authentication, ...props }) => {
       );
 
       setTimeout(() => {
-        navigate("/home");
-      }, 1500);
+        from ? navigate(`${from}`) : navigate("/home");
+      }, 2500);
     }
   }, [authentication]);
 
@@ -94,6 +96,11 @@ const MerchLogin = ({ authentication, ...props }) => {
                     </div>
                     <div className="mb-0 mb-md-0 text-center">
                       <h5>A place full of Sweetness. ❤️</h5>
+                      {from && (
+                        <p className="text-muted">
+                          To checkout, We need you to login first.
+                        </p>
+                      )}
                     </div>
                     <div className="auth-content my-auto">
                       <Form
@@ -199,6 +206,18 @@ const MerchLogin = ({ authentication, ...props }) => {
                                   <span>Log In</span>
                                 )}
                               </Button>
+                            </div>
+                            <div className="mt-3 d-grid">
+                              <Label
+                                className="form-label"
+                                style={{
+                                  fontWeight: 400,
+                                }}
+                              >
+                                Don't have an account?
+                                {"  "}
+                                <Link to={"/register"}>Sign Up here</Link>
+                              </Label>
                             </div>
                           </div>
                         </div>

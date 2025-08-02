@@ -24,6 +24,7 @@ const Home = ({ app, authentication, ...props }) => {
   }, [app]);
 
   React.useEffect(() => {
+    console.log("app.products", app.products);
     fetchCampaigns();
   }, []);
 
@@ -68,85 +69,6 @@ const Home = ({ app, authentication, ...props }) => {
             padding: 0,
           }}
         >
-          {/* <Row className="banner-container">
-            <Col className="banner-tag-line-container" lg={6}>
-              <div className="tagline">
-                <h5
-                  style={{
-                    fontWeight: 700,
-                    color: "#545454",
-                  }}
-                >
-                  WeARe is popping up at CIIT Open House!
-                </h5>
-
-                <p
-                  style={{
-                    marginTop: 20,
-                  }}
-                >
-                  Catch us at the event and enjoy an exclusive 10% OFF on all
-                  purchases made on-site!{" "}
-                </p>
-
-                <p>Promo runs from 📅 April 26, 2025 until supplies last.</p>
-              </div>
-              <div className="orderNow">
-                <Button
-                  type="button"
-                  style={{
-                    backgroundColor: "#FF5400",
-                    borderColor: "#FF5400",
-                    fontWeight: 700,
-                  }}
-                  color="primary"
-                  onClick={() => navigate("/catalog")}
-                >
-                  Order now
-                </Button>
-              </div>
-            </Col>
-
-            <Col
-              className="banner-image-container"
-              lg={6}
-              style={{
-                paddingLeft: "0px",
-                paddingRight: "0px",
-              }}
-            >
-              {bannerAds && (
-                <img
-                  src={bannerAds.Image[0]?.url || ""}
-                  className="banner-image"
-                  alt="Hero Banner"
-                />
-              )}
-            </Col>
-          </Row> */}
-          {/* <Row
-            style={{
-              backgroundColor: "#f2f4f5",
-              marginTop: 20,
-              padding: 20,
-              borderRadius: 8,
-            }}
-            className="mid-trans-container"
-          >
-            <Col className="ciit-merch-feature" lg={4} md={12}>
-              <h5 className="ciit-merch-feature-title">
-                The Official Seoulful Sweets
-              </h5>
-            </Col>
-            <Col className="delivery-pickup" lg={4} md={6}>
-              <img src={deliveryBan} className="delivery-pickup-logo" />
-              <span>Delivery or Pick-up</span>
-            </Col>
-            <Col className="secure-payment" lg={4} md={6}>
-              <img src={securePayment} className="secure-payment-logo" />
-              <span>Secured Payment</span>
-            </Col>
-          </Row> */}
           <Row>
             <Col className="feature-products-container">
               <h5>Featured Products</h5>
@@ -167,17 +89,35 @@ const Home = ({ app, authentication, ...props }) => {
                         style={{
                           backgroundColor: "#cd3957",
                           borderColor: "#cd3957",
-                          fontWeight: 700,
                           marginLeft: 10,
                           marginRight: 10,
                           borderRadius: 8,
+                          paddingTop: 12,
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
                         }}
                         color="primary"
                         onClick={() => {
                           navigate(`/product/${item["Product ID"]}`);
                         }}
                       >
-                        Order now
+                        <span
+                          style={{
+                            fontWeight: 700,
+                          }}
+                        >
+                          {item["Product Name"]}{" "}
+                        </span>
+                        <span>
+                          <i
+                            className="dripicons-plus"
+                            style={{
+                              fontWeight: 700,
+                              fontSize: 16,
+                            }}
+                          ></i>
+                        </span>
                       </Button>
                     </div>
                   ))}

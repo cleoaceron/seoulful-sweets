@@ -137,6 +137,10 @@ const Checkout = ({
     if (!isFromCart) {
       navigate("/cart");
     }
+    !authentication.authenticated &&
+      navigate("/login", {
+        state: { from: "/checkout" },
+      });
     authentication.authenticated && initTempEmail();
   }, [authentication]);
 

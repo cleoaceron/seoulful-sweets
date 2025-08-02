@@ -9,6 +9,7 @@ import { Container, Row, Col } from "reactstrap";
 
 // import images
 import seoulfulCircleLogo from "../../assets/images/seoulful-logo-circle.png";
+import seoulfulLogo from "../../assets/images/white-logo-ssweets.png";
 import "./styles.css";
 
 const Footer = (props) => {
@@ -20,7 +21,7 @@ const Footer = (props) => {
             <Col lg={6} xxl={7} md={5} sm={12} className="leftFooter">
               <Link to="/home">
                 <img
-                  src={seoulfulCircleLogo}
+                  src={seoulfulLogo}
                   width={120}
                   height={120}
                   style={{
@@ -78,13 +79,19 @@ const Footer = (props) => {
                     justifyContent: "flex-end",
                   }}
                 >
-                  <Link to="https://bit.ly/3D4mPPq" className="dropdown-item">
+                  <Link
+                    to="https://www.facebook.com/share/16n9q7HeM2/?mibextid=wwXIfr"
+                    className="dropdown-item"
+                  >
                     <i
                       className="fab fa-facebook-f"
                       style={{ height: 15, width: 15, marginRight: 5 }}
                     ></i>
                   </Link>
-                  <Link to="https://bit.ly/3Vr8h2m" className="dropdown-item">
+                  <Link
+                    to="https://www.instagram.com/seoulfulsweetsph/profilecard"
+                    className="dropdown-item"
+                  >
                     <i
                       className="fab fa-instagram"
                       style={{ height: 15, width: 15 }}
