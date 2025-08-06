@@ -36,17 +36,20 @@ const PrivacyPolicy = ({ account, authentication, ...props }) => {
                         <h5 className="mb-5">Privacy Policy</h5>
                         <p className="text-muted mt-2">
                           At{" "}
-                          <span style={{ fontWeight: 700 }}>WeAre Merch</span>,
-                          operated by WEAREMERCH ONLINE SHOP, we are committed
-                          to protecting your personal information and respecting
-                          your privacy. This Privacy Policy outlines how your
-                          information is collected, used, and disclosed when you
-                          use our services. By using our website, you consent to
-                          the practices described in this Privacy Policy.
+                          <span style={{ fontWeight: 700 }}>
+                            Seoulful Sweets
+                          </span>
+                          , operated by SEOULFUL SWEETS ONLINE SHOP, we are
+                          committed to protecting your personal information and
+                          respecting your privacy. This Privacy Policy outlines
+                          how your information is collected, used, and disclosed
+                          when you use our services. By using our website, you
+                          consent to the practices described in this Privacy
+                          Policy.
                         </p>
                         <p className="text-muted mt-2">
-                          This Privacy Policy applies to all users of WeAre
-                          Merch’s services, including visitors, account holders,
+                          This Privacy Policy applies to all users of Seoulful
+                          Sweets services, including visitors, account holders,
                           and those who transact on our platform. We encourage
                           you to read this policy carefully to understand our
                           views and practices regarding your personal
@@ -77,7 +80,7 @@ const PrivacyPolicy = ({ account, authentication, ...props }) => {
                           confidentiality agreements to ensure the security of
                           your information. Your data may also be disclosed to
                           legal authorities if required by law or to protect the
-                          rights and safety of WeAre Merch and its users.
+                          rights and safety of Seoulful Sweets and its users.
                         </p>
                         <p className="text-muted mt-2">
                           We take reasonable precautions to safeguard your
@@ -111,10 +114,10 @@ const PrivacyPolicy = ({ account, authentication, ...props }) => {
                           If you have questions or concerns about this Privacy
                           Policy, please contact us at{" "}
                           <a
-                            href="mailto:inquiry@wearemerch.ph"
+                            href="mailto:info.seoulfulsweets@gmail.com"
                             style={{ textDecoration: "none", color: "blue" }}
                           >
-                            inquiry@wearemerch.ph
+                            info.seoulfulsweets@gmail.com
                           </a>
                         </p>
                         <p className="text-muted mt-2">

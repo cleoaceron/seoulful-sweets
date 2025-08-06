@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { actionCreator, types } from "../../../store";
 import { encrypt } from "../../../helpers/crypto_helper";
-import logoSvg from "../../../assets/images/weare-logo.png";
+import logoSvg from "../../../assets/images/seoulful-logo.png";
 import "./styles.css";
 import moment from "moment";
 
@@ -129,7 +129,6 @@ const Register = ({ account, authentication, ...props }) => {
                   <div className="d-flex flex-column h-100">
                     <div className="mb-4 mb-md-5 text-center">
                       <Link to="/home" className="d-block auth-logo">
-                        <img src={logoSvg} alt="" height="28" />{" "}
                         <span className="logo-txt">Seoulful Sweets</span> ❤️
                       </Link>
                     </div>

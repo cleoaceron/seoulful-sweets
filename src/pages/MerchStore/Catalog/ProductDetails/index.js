@@ -317,7 +317,7 @@ const ProductDetails = ({ app, cart, ...props }) => {
                     style={{
                       backgroundColor: "#cd3957",
                       borderColor: "#cd3957",
-                      maxWidth: "50%",
+                      maxWidth: "70%",
                       padding: "15px",
                     }}
                     color="primary"

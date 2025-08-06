@@ -9,7 +9,7 @@ import { Container, Row, Col } from "reactstrap";
 import { actionCreator, types } from "../../store";
 import "./styles.css";
 
-import seoulfulLogo from "../../assets/images/seoulful-logo.png";
+import seoulfulLogo from "../../assets/images/seoulful-log-2.png";
 import cartIcon from "../../assets/images/cart.png";
 
 const Header = ({ authentication, cart, ...props }) => {
@@ -81,7 +81,7 @@ const Header = ({ authentication, cart, ...props }) => {
               ) : (
                 <>
                   <a
-                    href="https://www.facebook.com/messages/t/502903216233917"
+                    href="https://www.facebook.com/SeoulfulSweetsPH"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -122,7 +122,7 @@ const Header = ({ authentication, cart, ...props }) => {
                   </span>
                   <span>
                     <Link
-                      to={"https://www.facebook.com/messages/t/502903216233917"}
+                      to={"https://www.facebook.com/SeoulfulSweetsPH"}
                       target="_blank"
                     >
                       <i className="bx bx-message-rounded-dots"></i> Chat us
@@ -192,14 +192,7 @@ const Header = ({ authentication, cart, ...props }) => {
             >
               <Col className="logo-container" lg={4} xxl={4} md={4}>
                 <Link to="/home">
-                  <img
-                    src={seoulfulLogo}
-                    width={120}
-                    height={90}
-                    style={{
-                      marginRight: 10,
-                    }}
-                  />
+                  <img src={seoulfulLogo} width={160} height={160} />
                 </Link>
               </Col>
               <Col>

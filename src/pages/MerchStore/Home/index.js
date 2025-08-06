@@ -15,6 +15,7 @@ const Home = ({ app, authentication, ...props }) => {
   let navigate = useNavigate();
   //meta title
   document.title = "Seoulful Sweets | Home";
+  const { products } = app;
 
   const [bannerAds, setBannerAds] = React.useState(null);
   const [heroBannerAds, setHeroBannerAds] = React.useState(null);
@@ -70,8 +71,8 @@ const Home = ({ app, authentication, ...props }) => {
           }}
         >
           <Row>
-            <Col className="feature-products-container">
-              <h5>Featured Products</h5>
+            <Col className="feature-products-container mt-4">
+              {/* <h5>Featured Products</h5>
               <div className="feature-products">
                 {app.products.length > 0 &&
                   app.products.map((item, index) => (
@@ -121,9 +122,106 @@ const Home = ({ app, authentication, ...props }) => {
                       </Button>
                     </div>
                   ))}
+              </div> */}
+              <h1
+                style={{
+                  fontWeight: 800,
+                  fontSize: "2.25em",
+                  color: "#cd3957",
+                  textTransform: "uppercase",
+                  lineHeight: 1.1111111,
+                }}
+              >
+                Our Drinks
+              </h1>
+              <div
+                className="grid grid-cols-2 md:grid-cols-3 gap-8"
+                style={{
+                  width: "100%",
+                }}
+              >
+                {products.map((item, index) => (
+                  <div
+                    key={index}
+                    className="listing-tem"
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <div
+                      className="product-thumbnail-listing2"
+                      style={{ backgroundColor: "#ddd1c0" }}
+                    >
+                      <a href={`/product/${item["Product ID"]}`}>
+                        {item.Images.length > 0 && (
+                          <img
+                            src={item.Images[0].url}
+                            alt={item["Product Name"]}
+                            className="catalog-image"
+                            height={200}
+                            width={200}
+                          />
+                        )}
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <button
+                            type="button"
+                            className="btn btn-light waves-effect waves-light adjust-product-button px-2"
+                            style={{
+                              backgroundColor: "#cd3957",
+                              borderColor: "#cd3957",
+                            }}
+                          >
+                            <i
+                              className="bx bx-plus"
+                              style={{
+                                fontSize: 24,
+                                color: "#FFF",
+                              }}
+                            ></i>
+                          </button>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div
+                      className="product-name product-list-name mb-1"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <a
+                        href={`/product/${item["Product ID"]}`}
+                        className="font-bold hover:underline h5"
+                      >
+                        <span className="product-name ">
+                          {item["Product Name"]}
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      className="product-price-listing"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div>
+                        <span className="sale-price font-semibold">
+                          ₱ {parseInt(item.Price).toLocaleString("en-US")} PHP
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </Col>
-            <Col xxl={4} xl={4} md={4}>
+            <Col xxl={4} xl={4} md={4} className="mb-4">
               {heroBannerAds && heroBannerAds?.Image && (
                 <img
                   src={heroBannerAds.Image[0]?.url || ""}

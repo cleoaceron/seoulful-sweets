@@ -152,7 +152,7 @@ const Catalog = ({ app, ...props }) => {
               marginTop: 20,
             }}
           >
-            <div
+            {/* <div
               className="dropdown d-inline-block d-none d-md-block"
               style={{
                 width: 400,
@@ -252,7 +252,7 @@ const Catalog = ({ app, ...props }) => {
                   </label>
                 </div>
               ))}
-            </div>
+            </div> */}
             <div
               className="grid grid-cols-2 md:grid-cols-3 gap-8"
               style={{

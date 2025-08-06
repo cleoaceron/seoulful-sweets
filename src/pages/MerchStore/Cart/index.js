@@ -472,8 +472,8 @@ const Cart = ({ app, cart, ...props }) => {
                         navigate("/home");
                       }}
                       style={{
-                        backgroundColor: "#ff5400",
-                        borderColor: "#ff5400",
+                        backgroundColor: "#cd3957",
+                        borderColor: "#cd3957",
                         maxWidth: "40%",
                       }}
                       color="primary"

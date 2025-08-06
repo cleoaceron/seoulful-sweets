@@ -2,7 +2,6 @@
   "name": "minia-react",
   "version": "2.3.0",
   "private": true,
-  "homepage": "https://valerieaceron.github.io/seoulfulfulsweets",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^40.1.0",
     "@ckeditor/ckeditor5-core": "^40.1.0",

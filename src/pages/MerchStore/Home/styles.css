@@ -106,6 +106,15 @@
   max-height: 70px;
   margin-right: 10px;
 }
+.product-name {
+  font-size: 16px;
+}
+.adjust-product-button {
+  position: "absolute";
+  top: -35px;
+  left: -10px;
+  height: 40px;
+}
 @media (max-width: 1199px) {
   .feature-image {
     width: 180px;
@@ -192,5 +201,9 @@
   }
   .featureProducts {
     margin-top: 40px;
+  }
+  .product-name {
+    font-size: 14px;
+    font-weight: 600;
   }
 }

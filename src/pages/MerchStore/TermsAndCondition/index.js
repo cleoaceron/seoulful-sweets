@@ -44,12 +44,14 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                         <h5 className="mb-5">Terms and Conditions</h5>
                         <p className="text-muted mt-2">
                           Welcome to{" "}
-                          <span style={{ fontWeight: 700 }}>WeAre Merch</span>,
-                          owned and operated by WEAREMERCH ONLINE SHOP. By
-                          accessing or using our website and services, you agree
-                          to comply with and be bound by the following Terms and
-                          Conditions. Please read them carefully before using
-                          our site.
+                          <span style={{ fontWeight: 700 }}>
+                            Seoulful Sweets
+                          </span>
+                          , owned and operated by SEOULFUL SWEETS ONLINE SHOP.
+                          By accessing or using our website and services, you
+                          agree to comply with and be bound by the following
+                          Terms and Conditions. Please read them carefully
+                          before using our site.
                         </p>
                         <p className="text-muted mt-2">
                           By using our website, you confirm that you are at
@@ -59,11 +61,11 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                           not use this website or its services.
                         </p>
                         <p className="text-muted mt-2">
-                          WeAre Merch offers Seoulful Sweetsandise for sale
-                          through an e-commerce platform. All products are
-                          subject to availability, and we reserve the right to
-                          limit the sale of any product to any customer or
-                          geographic region.
+                          Seoulful Sweets offers Sweets drinks for sale through
+                          an e-commerce platform. All products are subject to
+                          availability, and we reserve the right to limit the
+                          sale of any product to any customer or geographic
+                          region.
                         </p>
 
                         <ul>
@@ -179,13 +181,13 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                               Customers must notify us of any issues via email
                               at{" "}
                               <a
-                                href="mailto:inquiry@wearemerch.ph"
+                                href="mailto:info.seoulfulsweets@gmail.com"
                                 style={{
                                   textDecoration: "none",
                                   color: "blue",
                                 }}
                               >
-                                inquiry@wearemerch.ph
+                                info.seoulfulsweets@gmail.com
                               </a>{" "}
                               within the return window.
                             </p>
@@ -254,7 +256,7 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                           All content on this website, including text, images,
                           graphics, and logos, is the property of{" "}
                           <span style={{ fontWeight: 700 }}>
-                            WEAREMERCH ONLINE SHOP
+                            SEOULFUL SWEETS ONLINE SHOP
                           </span>{" "}
                           or its content suppliers and is protected by
                           applicable copyright laws. You may not reproduce,
@@ -263,9 +265,9 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                         </p>
                         <h5 className="mt-5">Limitation of Liability</h5>
                         <p className="text-muted mt-2">
-                          WeAre Merch and{" "}
+                          Seoulful Sweets and{" "}
                           <span style={{ fontWeight: 700 }}>
-                            WEAREMERCH ONLINE SHOP
+                            SEOULFUL SWEETS ONLINE SHOP
                           </span>{" "}
                           shall not be held liable for any damages arising from
                           the use or inability to use our website or services,
@@ -296,10 +298,10 @@ const TermsAndCondition = ({ account, authentication, ...props }) => {
                           For any questions or concerns regarding these Terms
                           and Conditions, please contact us at{" "}
                           <a
-                            href="mailto:inquiry@wearemerch.ph"
+                            href="mailto:"
                             style={{ textDecoration: "none", color: "blue" }}
                           >
-                            inquiry@wearemerch.ph
+                            info.seoulfulsweets@gmail.com
                           </a>
                         </p>
                       </div>
