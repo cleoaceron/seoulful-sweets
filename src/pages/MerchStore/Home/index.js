@@ -7,9 +7,7 @@ import { actionCreator, types } from "../../../store";
 import Header from "../../../components/MerchStore/Header";
 import Footer from "../../../components/MerchStore/Footer";
 import "./styles.css";
-import { Button, Container, Row, Col } from "reactstrap";
-import deliveryBan from "../../../assets/images/delivery-ban.png";
-import securePayment from "../../../assets/images/secure-payment.png";
+import { Container, Row, Col } from "reactstrap";
 
 const Home = ({ app, authentication, ...props }) => {
   let navigate = useNavigate();
@@ -70,59 +68,8 @@ const Home = ({ app, authentication, ...props }) => {
             padding: 0,
           }}
         >
-          <Row>
+          <Row className="mb-5">
             <Col className="feature-products-container mt-4">
-              {/* <h5>Featured Products</h5>
-              <div className="feature-products">
-                {app.products.length > 0 &&
-                  app.products.map((item, index) => (
-                    <div key={index} className="feature-product-item">
-                      {item?.Images ? (
-                        <img
-                          className="feature-image"
-                          src={item.Images[0].url}
-                        />
-                      ) : (
-                        <p className="text-muted">No Image</p>
-                      )}
-                      <Button
-                        type="button"
-                        style={{
-                          backgroundColor: "#cd3957",
-                          borderColor: "#cd3957",
-                          marginLeft: 10,
-                          marginRight: 10,
-                          borderRadius: 8,
-                          paddingTop: 12,
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                        }}
-                        color="primary"
-                        onClick={() => {
-                          navigate(`/product/${item["Product ID"]}`);
-                        }}
-                      >
-                        <span
-                          style={{
-                            fontWeight: 700,
-                          }}
-                        >
-                          {item["Product Name"]}{" "}
-                        </span>
-                        <span>
-                          <i
-                            className="dripicons-plus"
-                            style={{
-                              fontWeight: 700,
-                              fontSize: 16,
-                            }}
-                          ></i>
-                        </span>
-                      </Button>
-                    </div>
-                  ))}
-              </div> */}
               <h1
                 style={{
                   fontWeight: 800,
@@ -136,89 +83,133 @@ const Home = ({ app, authentication, ...props }) => {
               </h1>
               <div
                 className="grid grid-cols-2 md:grid-cols-3 gap-8"
-                style={{
-                  width: "100%",
-                }}
+                style={{ width: "100%" }}
               >
-                {products.map((item, index) => (
-                  <div
-                    key={index}
-                    className="listing-tem"
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    <div
-                      className="product-thumbnail-listing2"
-                      style={{ backgroundColor: "#ddd1c0" }}
-                    >
-                      <a href={`/product/${item["Product ID"]}`}>
-                        {item.Images.length > 0 && (
-                          <img
-                            src={item.Images[0].url}
-                            alt={item["Product Name"]}
-                            className="catalog-image"
-                            height={200}
-                            width={200}
-                          />
-                        )}
-                        <div
-                          style={{
-                            display: "flex",
-                            justifyContent: "flex-end",
-                          }}
-                        >
-                          <button
-                            type="button"
-                            className="btn btn-light waves-effect waves-light adjust-product-button px-2"
-                            style={{
-                              backgroundColor: "#cd3957",
-                              borderColor: "#cd3957",
-                            }}
-                          >
-                            <i
-                              className="bx bx-plus"
-                              style={{
-                                fontSize: 24,
-                                color: "#FFF",
-                              }}
-                            ></i>
-                          </button>
-                        </div>
-                      </a>
-                    </div>
+                {(() => {
+                  const hasMore = products.length > 6;
+                  const list = hasMore ? products.slice(0, 6) : products;
 
-                    <div
-                      className="product-name product-list-name mb-1"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <a
-                        href={`/product/${item["Product ID"]}`}
-                        className="font-bold hover:underline h5"
-                      >
-                        <span className="product-name ">
-                          {item["Product Name"]}
-                        </span>
-                      </a>
-                    </div>
-                    <div
-                      className="product-price-listing"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div>
-                        <span className="sale-price font-semibold">
-                          ₱ {parseInt(item.Price).toLocaleString("en-US")} PHP
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                  return (
+                    list.length > 0 &&
+                    list.map((item, index) => {
+                      const showViewMore = hasMore && index === 5; // 6th tile
+
+                      return (
+                        <div
+                          key={index}
+                          className="listing-tem"
+                          style={{ width: "100%" }}
+                        >
+                          {showViewMore ? (
+                            <a
+                              href="/catalog"
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                minHeight: 260,
+                                borderRadius: 12,
+                                textDecoration: "none", // remove default underline
+                              }}
+                            >
+                              <span
+                                style={{
+                                  fontWeight: 800,
+                                  color: "#cd3957",
+                                  fontSize: 14,
+                                  borderBottom: "2px dotted #cd3957", // broken underline
+                                  paddingBottom: 4,
+                                }}
+                              >
+                                View More ({products.length - 6}+)
+                              </span>
+                            </a>
+                          ) : (
+                            <>
+                              <div
+                                className="product-thumbnail-listing2"
+                                style={{ backgroundColor: "#ddd1c0" }}
+                              >
+                                <a href={`/product/${item["Product ID"]}`}>
+                                  {item?.Images && item.Images.length > 0 ? (
+                                    <img
+                                      src={item.Images[0].url}
+                                      alt={item["Product Name"]}
+                                      className="catalog-image"
+                                      height={200}
+                                      width={200}
+                                    />
+                                  ) : (
+                                    <div style={{ height: 200, width: 200 }} />
+                                  )}
+                                  <div
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "flex-end",
+                                    }}
+                                  >
+                                    <button
+                                      type="button"
+                                      className="btn btn-light waves-effect waves-light adjust-product-button px-2"
+                                      style={{
+                                        backgroundColor: "#cd3957",
+                                        borderColor: "#cd3957",
+                                        boxShadow:
+                                          "0 4px 12px rgba(0,0,0,0.12)",
+                                      }}
+                                    >
+                                      <i
+                                        className="bx bx-plus"
+                                        style={{ fontSize: 24, color: "#FFF" }}
+                                      />
+                                    </button>
+                                  </div>
+                                </a>
+                              </div>
+
+                              <div
+                                className="product-name product-list-name mb-1"
+                                style={{
+                                  display: "flex",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <a
+                                  href={`/product/${item["Product ID"]}`}
+                                  className="font-bold hover:underline h5"
+                                >
+                                  <span className="product-name ">
+                                    {item["Product Name"]}
+                                  </span>
+                                </a>
+                              </div>
+
+                              <div
+                                className="product-price-listing"
+                                style={{
+                                  display: "flex",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <div>
+                                  <span className="sale-price font-semibold">
+                                    ₱{" "}
+                                    {item?.Price
+                                      ? parseInt(item.Price).toLocaleString(
+                                          "en-US"
+                                        )
+                                      : "0.00"}{" "}
+                                    PHP
+                                  </span>
+                                </div>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      );
+                    })
+                  );
+                })()}
               </div>
             </Col>
             <Col xxl={4} xl={4} md={4} className="mb-4">

@@ -66,12 +66,7 @@ const SearchScreen = ({ app, authentication, ...props }) => {
 
       <div className="auth-page">
         {/* Render Breadcrumbs */}
-        <Container
-          className="container"
-          style={{
-            height: screenHeight,
-          }}
-        >
+        <Container className="container">
           <Row>
             <Col className="searchResult">
               <h5 className="mb-3">Search Result:</h5>

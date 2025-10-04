@@ -77,7 +77,6 @@ select {
   bottom: 0;
 }
 .product-thumbnail-listing2 {
-  background-color: #f6f6f6;
   color: rgba(51, 17, 51, 0.0666666667);
   min-height: 200px;
   display: flex;
@@ -92,11 +91,27 @@ select {
   vertical-align: middle;
 }
 
+/* Combine 344px to 430px only */
+@media (min-width: 344px) and (max-width: 429px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* From 430px and above until 767px (optional adjustment) */
+@media (min-width: 430px) and (max-width: 767px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Keep this — unaffected */
 @media (min-width: 768px) {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
 .gap-8 {
   gap: 2rem;
 }

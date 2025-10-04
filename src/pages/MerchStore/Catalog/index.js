@@ -31,7 +31,11 @@ const Catalog = ({ app, ...props }) => {
       <Header />
       <div
         className="page-content"
-        style={{ paddingLeft: 20, paddingRight: 20 }}
+        style={{
+          paddingLeft: 20,
+          paddingRight: 20,
+          backgroundColor: "#ddd1c0",
+        }}
       >
         <Container>
           {/* Render Breadcrumbs */}
@@ -54,7 +58,7 @@ const Catalog = ({ app, ...props }) => {
               {catalog && catalog}
             </h1>
           </div>
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -143,7 +147,7 @@ const Catalog = ({ app, ...props }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div
             style={{
               display: "flex",
@@ -254,7 +258,7 @@ const Catalog = ({ app, ...props }) => {
               ))}
             </div> */}
             <div
-              className="grid grid-cols-2 md:grid-cols-3 gap-8"
+              className="grid grid-cols-3 md:grid-cols-3 gap-8"
               style={{
                 width: "100%",
               }}
@@ -269,7 +273,7 @@ const Catalog = ({ app, ...props }) => {
                 >
                   <div className="product-thumbnail-listing2">
                     <a href={`/product/${item["Product ID"]}`}>
-                      {item.Images.length > 0 && (
+                      {item?.Images && item.Images.length > 0 && (
                         <img
                           src={item.Images[0].url}
                           alt={item["Product Name"]}
@@ -309,7 +313,11 @@ const Catalog = ({ app, ...props }) => {
                   >
                     <div>
                       <span className="sale-price font-semibold">
-                        ₱ {parseInt(item.Price).toLocaleString("en-US")} PHP
+                        ₱{" "}
+                        {item?.Price
+                          ? parseInt(item.Price).toLocaleString("en-US")
+                          : "0.00"}{" "}
+                        PHP
                       </span>
                     </div>
                   </div>

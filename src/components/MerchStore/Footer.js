@@ -40,7 +40,7 @@ const Footer = (props) => {
                 </li>
                 <li>
                   <Link
-                    to="https://bit.ly/3D4mPPq"
+                    to="https://www.messenger.com/t/237648672767565"
                     target="_blank"
                     className="dropdown-item"
                   >
@@ -50,11 +50,6 @@ const Footer = (props) => {
                 <li>
                   <Link to="/catalog" className="dropdown-item">
                     Products
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/#" className="dropdown-item">
-                    FAQ
                   </Link>
                 </li>
                 <li>

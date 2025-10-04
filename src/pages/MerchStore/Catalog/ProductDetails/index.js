@@ -252,7 +252,12 @@ const ProductDetails = ({ app, cart, ...props }) => {
                   <h6>SKU: {selectedProduct["Product ID"]}</h6>
                 </div>
                 <div className="product-details__price">
-                  <h3>₱ {parseFloat(selectedProduct.Price).toFixed(2)}</h3>
+                  <h3>
+                    ₱{" "}
+                    {selectedProduct?.Price
+                      ? parseFloat(selectedProduct.Price).toFixed(2)
+                      : "0.00"}
+                  </h3>
                 </div>
                 {selectedProduct.VariantOptions === "Yes" && (
                   <>
